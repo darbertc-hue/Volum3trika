@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "companyName": "VOLUM3TRIKA²",
+    "heroTitle": "De la visión a una obra bien ejecutada.",
+    "heroDescription": "Soluciones integrales para construir, transformar y mantener espacios industriales, corporativos, comerciales y residenciales.",
+    "email": "volum3trika@gmail.com",
+    "phone": "809-389-8022",
+    "whatsapp": "18093898022",
+    "address": "Calle Gaspar Polanco #54, Edificio Aimee I, Apartamento 101. Bella Vista, Santo Domingo.",
+    "instagram": "volum3trika",
+    "about": "Integramos ingeniería, construcción y mantenimiento para atender necesidades de infraestructura, desde intervenciones específicas hasta proyectos de mayor alcance.",
+    "mission": "Brindar soluciones de infraestructura con calidad, innovación y responsabilidad.",
+    "team": [
+      { "name": "Ing. Adan De La Rosa", "role": "Director General", "description": "Ejecución de proyectos y enfoque en la viabilidad técnica de la infraestructura." },
+      { "name": "Ing. Awilda Eusebio", "role": "Project Manager", "description": "Planificación estratégica y gestión de remozamientos en infraestructuras públicas y privadas." }
+    ]
+  },
+  "services": [
+    { "slug": "estructura-y-obra-civil", "number": "01", "verb": "Construir", "title": "Estructura y obra civil", "description": "Infraestructura que responde a las necesidades de operación, almacenamiento y uso de cada espacio.", "body": "Desarrollamos soluciones de obra civil y estructuras para proyectos industriales y de infraestructura. El alcance se define a partir de las condiciones del lugar, los requerimientos técnicos y las prioridades del cliente.", "items": ["Construcción de naves industriales y de almacenamiento", "Estructuras metálicas", "Sistemas aligerados en fibra de vidrio y yeso", "Pisos de hormigón pulido para alto tráfico"], "image": "/images/industrial.webp", "imageIsReference": true },
+    { "slug": "arquitectura-y-terminaciones", "number": "02", "verb": "Transformar", "title": "Arquitectura y terminaciones", "description": "Acabados que integran funcionalidad, identidad y atención al detalle.", "body": "Intervenimos fachadas, paredes, pisos y superficies para adecuar espacios residenciales, corporativos y comerciales. Coordinamos materiales y terminaciones según el alcance del proyecto.", "items": ["Revestimientos arquitectónicos en aluminio compuesto (ACM)", "Recubrimientos de paredes y pisos", "Pintura general interior y exterior", "Divisiones y adecuaciones de espacios"], "image": "/images/villa.webp", "imageIsReference": true },
+    { "slug": "instalaciones-y-mantenimiento", "number": "03", "verb": "Conservar", "title": "Instalaciones y mantenimiento", "description": "Intervenciones para proteger superficies y conservar la infraestructura.", "body": "Atendemos necesidades de instalaciones hidrosanitarias, fontanería, impermeabilización y protección de superficies. Cada intervención comienza por identificar la necesidad y definir una solución acorde con el espacio.", "items": ["Instalaciones hidrosanitarias", "Fontanería", "Sistemas de impermeabilización", "Protección de superficies"], "image": "/images/corporate.webp", "imageIsReference": true }
+  ],
+  "projects": [
+    { "slug": "nave-industrial-km22", "title": "Nave Industrial KM22", "sector": "Industrial", "location": "Autopista Duarte", "summary": "Infraestructura para almacenamiento y distribución logística.", "scope": ["Construcción de infraestructura logística", "Levantamiento de estructura metálica", "Pisos de hormigón pulido industrial"], "serviceSlugs": ["estructura-y-obra-civil"], "image": "/images/industrial.webp", "imageIsReference": true, "featured": true },
+    { "slug": "villa-cerezas-33", "title": "Villa Cerezas 33", "sector": "Residencial", "location": "Casa de Campo", "summary": "Terminaciones arquitectónicas e instalaciones residenciales.", "scope": ["Terminaciones arquitectónicas", "Instalaciones hidrosanitarias", "Recubrimientos de paredes y pisos", "Pintura general"], "serviceSlugs": ["arquitectura-y-terminaciones", "instalaciones-y-mantenimiento"], "image": "/images/villa.webp", "imageIsReference": true, "featured": true },
+    { "slug": "torre-rayrub-city-center", "title": "Torre RayRub IV y City Center", "sector": "Corporativo", "location": "", "summary": "Revestimientos y protección de superficies en entornos corporativos.", "scope": ["Revestimientos arquitectónicos en ACM", "Divisiones en sistemas aligerados", "Pintura y protección de superficies exteriores"], "serviceSlugs": ["arquitectura-y-terminaciones"], "image": "/images/corporate.webp", "imageIsReference": true, "featured": true },
+    { "slug": "piantini-arroyo-hondo", "title": "Intervenciones en Piantini y Arroyo Hondo", "sector": "Comercial", "location": "Santo Domingo", "summary": "Remozamientos y adecuaciones en entornos comerciales.", "scope": ["Remozamientos comerciales", "Adaptaciones estructurales", "Instalaciones hidrosanitarias", "Impermeabilización"], "serviceSlugs": ["estructura-y-obra-civil", "instalaciones-y-mantenimiento"], "image": "/images/urban.webp", "imageIsReference": true, "featured": true }
+  ]
+}

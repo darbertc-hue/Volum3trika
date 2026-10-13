@@ -1,0 +1,5 @@
+import type { Metadata } from 'next';
+import { getContent } from '@/lib/content';
+import { QuoteCTA } from '@/components/Content';
+export const metadata:Metadata={title:'Nosotros',description:'Conoce a VOLUM3TRIKA² Ingeniería y Servicios y su dirección técnica.'};
+export default async function About(){const {settings}=await getContent();return <><section className="section"><p className="eyebrow">VOLUM3TRIKA² Ingeniería y Servicios</p><h1>Visión técnica.<br/>Responsabilidad en cada obra.</h1><p className="copy large">{settings.about}</p><div className="mission"><p className="eyebrow">Nuestra misión</p><h2>{settings.mission}</h2></div><p className="eyebrow">Dirección técnica</p><h2>El equipo detrás de la ejecución.</h2><div className="team-grid">{settings.team.map(person=><article className="team-member" key={person.name}><span className="team-initials" aria-hidden="true">{person.name.split(' ').slice(1,3).map(s=>s[0]).join('')}</span><p className="eyebrow">{person.role}</p><h3>{person.name}</h3><p>{person.description}</p></article>)}</div></section><QuoteCTA settings={settings}/></>;}
