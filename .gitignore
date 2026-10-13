@@ -1,0 +1,7 @@
+/tmp/
+/output/*
+!/output/VOLUM3TRIKA-Prototipo-Cliente.html
+!/output/assets/
+/sites/**/.git/
+/sites/**/.openai/
+*.log
