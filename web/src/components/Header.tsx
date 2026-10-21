@@ -67,14 +67,13 @@ export default function Header() {
                 Ingeniería y Servicios, SRL
               </span>
             </div>
-            {/* Accessible image for QA testing and brand verification */}
             <Image
               src="/images/logo.png"
               alt="VOLUM3TRIKA² Ingeniería y Servicios"
-              width={1}
-              height={1}
+              width={160}
+              height={40}
               priority
-              className="opacity-0 pointer-events-none absolute w-0 h-0"
+              className="h-8 w-auto object-contain rounded bg-white px-2 py-0.5 shadow-sm hidden sm:block ml-2"
             />
           </Link>
 
@@ -124,10 +123,11 @@ export default function Header() {
             <Link
               href="/nosotros"
               onClick={closeMenu}
+              aria-label="Nosotros"
               aria-current={path.startsWith('/nosotros') ? 'page' : undefined}
               className="hover:text-[#00afc1] transition-colors"
             >
-              Sinergia Directiva
+              Nosotros
             </Link>
             <Link
               href="/#estimador"
