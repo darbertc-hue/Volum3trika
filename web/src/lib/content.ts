@@ -7,8 +7,50 @@ export const sectors = ['Industrial', 'Residencial', 'Corporativo', 'Comercial']
 const image = z.string().refine(v => v.startsWith('/images/') || /^https:\/\/cdn\.sanity\.io\/images\//.test(v));
 const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
 export const serviceSchema = z.object({ slug, number: z.string(), verb: z.string(), title: z.string(), description: z.string(), body: z.string(), items: z.array(z.string()), image, imageIsReference: z.boolean() });
-export const projectSchema = z.object({ slug, title: z.string(), sector: z.enum(sectors), location: z.string(), summary: z.string(), scope: z.array(z.string()), serviceSlugs: z.array(slug), image, imageIsReference: z.boolean(), featured: z.boolean() });
-const settingsSchema = z.object({ companyName: z.string(), heroTitle: z.string(), heroDescription: z.string(), email: z.email(), phone: z.string(), whatsapp: z.string().regex(/^\d{10,15}$/), address: z.string(), instagram: z.string().regex(/^[a-zA-Z0-9._]+$/), about: z.string(), mission: z.string(), team: z.array(z.object({ name: z.string(), role: z.string(), description: z.string() })) });
+export const projectSchema = z.object({
+  slug,
+  title: z.string(),
+  sector: z.enum(sectors),
+  location: z.string(),
+  summary: z.string(),
+  scope: z.array(z.string()),
+  impact: z.string().optional().default(''),
+  serviceSlugs: z.array(slug),
+  image,
+  imageIsReference: z.boolean(),
+  featured: z.boolean()
+});
+
+const settingsSchema = z.object({
+  companyName: z.string(),
+  legalName: z.string().optional().default('VOLUM3TRIKA² INGENIERÍA Y SERVICIOS, SRL.'),
+  heroTitle: z.string(),
+  heroDescription: z.string(),
+  email: z.string().email(),
+  directorEmails: z.array(z.string()).optional().default([]),
+  phone: z.string(),
+  additionalPhones: z.array(z.string()).optional().default([]),
+  whatsapp: z.string().regex(/^\d{10,15}$/),
+  address: z.string(),
+  instagram: z.string().regex(/^[a-zA-Z0-9._]+$/),
+  about: z.string(),
+  mission: z.string(),
+  vision: z.string().optional().default(''),
+  targetAudiences: z.array(z.string()).optional().default([]),
+  retailLogistics: z.object({
+    title: z.string(),
+    description: z.string(),
+    pillars: z.array(z.object({
+      name: z.string(),
+      detail: z.string()
+    }))
+  }).optional(),
+  team: z.array(z.object({
+    name: z.string(),
+    role: z.string(),
+    description: z.string()
+  }))
+});
 export type Service = z.infer<typeof serviceSchema>;
 export type Project = z.infer<typeof projectSchema>;
 export type Settings = z.infer<typeof settingsSchema>;

@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Script from 'next/script';
 declare global { interface Window { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void; } }
-export function track(name: 'whatsapp_click' | 'quote_submitted', detail: Record<string,string> = {}) {
+export function track(name: 'whatsapp_click' | 'quote_submitted' | 'estimator_click', detail: Record<string,string> = {}) {
   window.dispatchEvent(new CustomEvent('volum3trika:conversion', { detail: { event: name, ...detail } }));
   if (window.gtag && localStorage.getItem('v3-analytics-consent') === 'yes') window.gtag('event', name, detail);
 }
