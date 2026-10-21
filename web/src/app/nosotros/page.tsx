@@ -30,7 +30,7 @@ export default async function About() {
             <h2 style={{ fontSize: '24px' }}>{settings.mission}</h2>
           </div>
           {settings.vision && (
-            <div className="mission" style={{ margin: 0, background: '#eaf4f3' }}>
+            <div className="mission" style={{ margin: 0, background: '#172429' }}>
               <p className="eyebrow">Nuestra visión</p>
               <h2 style={{ fontSize: '24px' }}>{settings.vision}</h2>
             </div>

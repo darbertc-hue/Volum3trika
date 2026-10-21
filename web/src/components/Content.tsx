@@ -54,7 +54,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <h3>{project.title} <span aria-hidden="true">↗</span></h3>
           <p>{project.summary}</p>
           {project.impact && (
-            <p className="project-impact" style={{ marginTop: '10px', fontSize: '12px', color: '#00afc1' }}>
+            <p className="project-impact">
               <strong>Impacto:</strong> {project.impact}
             </p>
           )}
